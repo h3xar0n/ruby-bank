@@ -6,7 +6,15 @@ class Account
     @balance = balance
     @name = name
   end
-  
+
+  def display_balance(pin_number)
+    if pin_number == pin
+      puts "Balance: $#{@balance}."
+    else
+      puts pin_error
+    end
+  end  
+
   private
   
   def pin
